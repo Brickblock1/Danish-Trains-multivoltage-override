@@ -1,0 +1,64 @@
+grf {
+	grfid:"BB\0DF";
+	name: string(NAME);
+	desc: string(DESC);
+	min_compatible_version: 1;
+	version: 1;
+	url: string(URL);
+}
+
+railtypetable{
+	_25KV: [SAAA, SAAE, ELRL], 
+	_X5KV: [NORD, SAAA, SAAE, ELRL], 
+	_1500V: [SAAd, SAAD, SAAE, ELRL], 
+}
+
+engine_override("TT14");
+
+if (grf_order_behind("TT14") == 0) {
+	error(FATAL, MUST_LOAD_AFTER, "Danish Trains");
+}
+
+item(FEAT_TRAINS, ER, 2) {
+	property {
+		track_type: _25KV;
+	}
+}
+
+item(FEAT_TRAINS, ET, 5) {
+	property {
+		track_type: _X5KV;
+	}
+}
+
+item(FEAT_TRAINS, X2, 3) {
+	property {
+		track_type: _X5KV;
+	}
+}
+
+// S-tog
+
+item(FEAT_TRAINS, S1, 13) {
+	property {
+		track_type: _1500V;
+	}
+}
+
+item(FEAT_TRAINS, S2, 14) {
+	property {
+		track_type: _1500V;
+	}
+}
+
+item(FEAT_TRAINS, S3, 15) {
+	property {
+		track_type: _1500V;
+	}
+}
+
+item(FEAT_TRAINS, S4, 16) {
+	property {
+		track_type: _1500V;
+	}
+}
