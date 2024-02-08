@@ -3,7 +3,7 @@ grf {
 	name: string(NAME);
 	desc: string(DESC);
 	min_compatible_version: 1;
-	version: 1;
+	version: 2;
 	url: string(URL);
 }
 
@@ -31,7 +31,19 @@ item(FEAT_TRAINS, ET, 5) {
 	}
 }
 
-item(FEAT_TRAINS, X2, 3) {
+item(FEAT_TRAINS, X2_6, 3) {
+	property {
+		track_type: _X5KV;
+	}
+}
+
+item(FEAT_TRAINS, X2_5, 17) {
+	property {
+		track_type: _X5KV;
+	}
+}
+
+item(FEAT_TRAINS, X2_7, 18) {
 	property {
 		track_type: _X5KV;
 	}
